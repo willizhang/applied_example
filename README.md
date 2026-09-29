@@ -1,5 +1,55 @@
-This repository includes R scripts for the applied example in Mathur et al. (2026), [*Estimating conditional means under missingness-not-at-random with incomplete auxiliary variables*](https://www.researchgate.net/publication/401123077_Estimating_conditional_means_under_missingness-not-at-random_with_incomplete_auxiliary_variables). Run sexual_identity_change_SPHC-2014_to_2021.Rmd first, followed by mia_nice_sensitivity_analyses.Rmd, mia_ice_and_mice_model_diagnostics.Rmd, and validity_check.r; the main file produces forest_plot.svg (Figure 4), forest_plot_compare.svg (Figure S4), and results_all.xlsx.
+# Applied example
 
-The Stockholm Public Health Cohort (SPHC) data used in the applied example are not publicly available because access is subject to [data protection and SPHC data-access requirements](https://www.ces.regionstockholm.se/projekt-och-uppdrag/halsa-stockholm/SPHC-data/). Consequently, the repository includes only the analysis code.
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23035934.svg)](https://doi.org/10.5281/zenodo.23035934)
 
-A pseudo-dataset is not provided to ensure that no information from the SPHC data is used in generating such a dataset and to preclude any potential disclosure risk. Users without access to the SPHC data can instead generate simulated data independently of the SPHC data and use them to run the analysis code. Example code for generating such data is provided in simulated_code_example.R.
+This repository includes R scripts for the applied example in Mathur et al. (2026), [*Estimating conditional means under missingness-not-at-random with incomplete auxiliary variables*](https://www.researchgate.net/publication/401123077_Estimating_conditional_means_under_missingness-not-at-random_with_incomplete_auxiliary_variables).
+
+## File structure
+
+``` text
+applied_example/
+├── 01a_prepare_SPHC_data.R
+├── 01b_generate_pseudo_data.R
+├── 02_main_analysis.Rmd
+├── 03_sensitivity_analysis.Rmd
+├── 04_model_diagnostics.Rmd
+└── 05_validity_check.R
+```
+
+## How to run the code
+
+There are two alternative starting points.
+
+### Option 1: Users with authorized access to the SPHC data
+
+Run:
+
+1.  `01a_prepare_SPHC_data.R`
+2.  `02_main_analysis.Rmd`
+3.  `03_sensitivity_analysis.Rmd`
+4.  `04_model_diagnostics.Rmd`
+5.  `05_validity_check.R`
+
+### Option 2: Users without access to the SPHC data
+
+Run:
+
+1.  `01b_generate_pseudo_data.R`
+2.  `02_main_analysis.Rmd`
+3.  `03_sensitivity_analysis.Rmd`
+4.  `04_model_diagnostics.Rmd`
+5.  `05_validity_check.R`
+
+Do not run both `01a_prepare_SPHC_data.R` and `01b_generate_pseudo_data.R`. They are alternative data-preparation steps. The remaining analysis files use the dataset created by either Step 1a or Step 1b.
+
+## Outputs
+
+`02_main_analysis.Rmd` produces:
+
+- `forest_plot.svg` — Figure 4
+- `forest_plot_compare.svg` — Figure S4
+- `results_all.xlsx` — analysis estimates
+
+## Data availability
+
+The Stockholm Public Health Cohort (SPHC) data used in the applied example are not publicly available because access is subject to [data protection and SPHC data-access requirements](https://www.ces.regionstockholm.se/projekt-och-uppdrag/halsa-stockholm/SPHC-data/). To facilitate reproducibility, a pseudo-dataset can be generated using 01b_generate_pseudo_data.R. Users without authorized access to the SPHC data can run this file to generate example data with the same variable structure required by the subsequent analysis code.
