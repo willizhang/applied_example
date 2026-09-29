@@ -40,7 +40,7 @@ Run:
 4.  `04_model_diagnostics.Rmd`
 5.  `05_validity_check.R`
 
-Do not run both `01a_prepare_SPHC_data.R` and `01b_generate_pseudo_data.R`. They are alternative data-preparation steps. The remaining analysis files use the dataset created by either Step 1a or Step 1b.
+Do not run both `01a_prepare_SPHC_data.R` and `01b_generate_pseudo_data.R`. They are alternative data-preparation steps.
 
 ## Outputs
 
@@ -52,4 +52,6 @@ Do not run both `01a_prepare_SPHC_data.R` and `01b_generate_pseudo_data.R`. They
 
 ## Data availability
 
-The Stockholm Public Health Cohort (SPHC) data used in the applied example are not publicly available because access is subject to [data protection and SPHC data-access requirements](https://www.ces.regionstockholm.se/projekt-och-uppdrag/halsa-stockholm/SPHC-data/). To facilitate reproducibility, a pseudo-dataset can be generated using 01b_generate_pseudo_data.R. Users without authorized access to the SPHC data can run this file to generate example data with the same variable structure required by the subsequent analysis code.
+The Stockholm Public Health Cohort (SPHC) data used in the applied example are not publicly available because access is subject to [data protection and SPHC data-access requirements](https://www.ces.regionstockholm.se/projekt-och-uppdrag/halsa-stockholm/SPHC-data/).
+
+To facilitate reproducibility, a pseudo-dataset is generated using 01b_generate_pseudo_data.R. Users without authorized access to the SPHC data can run this file to generate example data with the same variable structure required by the subsequent analysis code.
