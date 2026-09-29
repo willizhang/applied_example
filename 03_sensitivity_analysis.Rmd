@@ -19,7 +19,7 @@ nrow( d_mia )
 
 # modeled auxiliary variables: age, sex, country of birth
 set.seed( 123 )
-mia_model_3 <- mia( data = d_mia,
+mia_model_3 <- mia_nice( data = d_mia,
                     X_names = c( "sexual_identity_2014" ), 
                     X_values_1 = c( "Non-heterosexual" ),
                     X_values_2 = c( "Heterosexual" ),
@@ -64,7 +64,7 @@ plot( mia_model_3$fit_W[[2]] )
 ##### 1.1.2. Reverse ordering
 ```{r}
 set.seed( 123 )
-mia_model_check_3 <- mia( data = d_mia,
+mia_model_check_3 <- mia_nice( data = d_mia,
                           X_names = c( "sexual_identity_2014" ),
                           X_values_1 = c( "Non-heterosexual" ),
                           X_values_2 = c( "Heterosexual" ),
@@ -95,7 +95,7 @@ results_mia_model_check_3
 ```{r}
 # modeled auxiliary variables: age, sex, country of birth, occupation
 set.seed( 123 )
-mia_model_4 <- mia( data = d_mia,
+mia_model_4 <- mia_nice( data = d_mia,
                     X_names = c( "sexual_identity_2014" ), 
                     X_values_1 = c( "Non-heterosexual" ),
                     X_values_2 = c( "Heterosexual" ),
@@ -141,7 +141,7 @@ plot( mia_model_4$fit_W[[2]] )
 ##### 1.2.2. Reverse ordering
 ```{r}
 set.seed( 123 )
-mia_model_check_4 <- mia( data = d_mia,
+mia_model_check_4 <- mia_nice( data = d_mia,
                           X_names = c( "sexual_identity_2014" ),
                           X_values_1 = c( "Non-heterosexual" ),
                           X_values_2 = c( "Heterosexual" ),

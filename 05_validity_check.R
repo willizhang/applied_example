@@ -25,7 +25,7 @@ tidy_cc %>%
 
 # imputation analysis
 
-long_data <- complete( imp, action = "long", include = TRUE )
+long_data <- complete( mice_model_1, action = "long", include = TRUE ) # MICE model 1 as an example
 summary( long_data )
 
 fit_model <- with( as.mids( long_data ),

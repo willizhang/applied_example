@@ -1,17 +1,19 @@
 ---
 title: "Sexual Identity Change, SPHC 2014 Followed Up Until 2021"
-author: "Willi Zhang, Sean McGrath, Maya Mathur, Shaun Seaman, Ilya Shpitser"
-email: willi.zhang@ki.se
-output:
-  html_document:
-    self_contained: true
-    toc: true
-    number_sections: true
-    df_print: paged
-    theme: cosmo
-editor_options:
+output: html_notebook
+editor_options: 
   chunk_output_type: console
 ---
+
+```{r}
+# Use pseudo-dataset if original dataset is unavailable
+
+d_2014_selected <- if (exists("d_2014_selected")) {
+  d_2014_selected
+} else {
+  d_2014_selected_pseudo
+}
+```
 
 ### 1. Complete-case analysis
 ```{r}

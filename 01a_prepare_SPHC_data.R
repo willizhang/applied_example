@@ -15,6 +15,9 @@ library(readxl)
 library(here)
 library(DHARMa)
 
+# Note: The packages loaded above are used in the analyses presented in this
+# script as well as in other analysis scripts in this repository.
+
 
 ### 2. SPHC 2014, followed up to 2021
 

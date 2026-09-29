@@ -54,4 +54,4 @@ Do not run both `01a_prepare_SPHC_data.R` and `01b_generate_pseudo_data.R`. They
 
 The Stockholm Public Health Cohort (SPHC) data used in the applied example are not publicly available because access is subject to [data protection and SPHC data-access requirements](https://www.ces.regionstockholm.se/projekt-och-uppdrag/halsa-stockholm/SPHC-data/).
 
-To facilitate reproducibility, a pseudo-dataset is generated using 01b_generate_pseudo_data.R. Users without authorized access to the SPHC data can run this file to generate example data with the same variable structure required by the subsequent analysis code.
+To facilitate reproducibility, we therefore provide R code (`01b_generate_pseudo_data.R`) to generate a fully synthetic pseudo-dataset solely to demonstrate execution of the analysis code. The sample size, variable distributions, associations, and missing-data patterns in the pseudo-dataset are arbitrarily specified and do not represent those in the original SPHC data. Accordingly, the pseudo-dataset is intended to demonstrate the analytical workflow and cannot be used to reproduce the numerical results reported in the article.
