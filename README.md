@@ -1,6 +1,6 @@
 # Applied example
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23035934.svg)](https://doi.org/10.5281/zenodo.23035934)
+[![DOI](https://zenodo.org/badge/1124784388.svg)](https://doi.org/10.5281/zenodo.23035933)
 
 This repository includes R scripts for the applied example in Mathur et al. (2026), [*Estimating conditional means under missingness-not-at-random with incomplete auxiliary variables*](https://www.researchgate.net/publication/401123077_Estimating_conditional_means_under_missingness-not-at-random_with_incomplete_auxiliary_variables).
 
